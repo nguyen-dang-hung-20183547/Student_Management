@@ -7,7 +7,7 @@ public class StudentMNG{
         Scanner sc=new Scanner(System.in);
         int Case;
         while(1<2){
-            System.out.println("-----------------Main Menu--------------- \n1.Add Student           2.Edit by ID            3.Remove by ID\n4.Sort by GPA           5.Sort by name          6.Show Student\n0.Exit\nMoi nhap menu task: ");
+            System.out.println("-----------------Main Menu--------------- \n1.Add Student           2.Edit by ID            3.Remove by ID\n4.Sort by GPA           5.Show Student          6.Exit\nEnter menu task: ");
             Case=sc.nextInt();
             switch(Case){
                 case 1: 
@@ -28,9 +28,7 @@ public class StudentMNG{
                 case 4:
                     Sort_list.Sorted(mylist);
                     break;
-                case 5: 
-                    break;
-                case 6:
+                case 5:
                     Iterator<Student> itr=mylist.iterator();
                     int i=1;
                     while (itr.hasNext()){
@@ -39,7 +37,7 @@ public class StudentMNG{
                         itr.next().showSD();
                     }
                     break;
-                case 0:
+                case 6:
                     System.exit(0);
                 default: break;
             }
